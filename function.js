@@ -92,7 +92,18 @@
                  mesh1.name = 1;
                  mesh1.position.z = 0;
                  mesh1.rotation.set(0,0,-Math.PI/2);
-                 objects.push(mesh1);
+                 var material_text = new THREE.MeshPhongMaterial({ color: 0xdddddd    });
+                 var text = new THREE.TextGeometry( "4mm" , { size: 60,
+    height: 20,
+    curveSegments: 3,
+    font: 'helvetiker',
+    weight: 'normal',
+    bevelThickness: 3,
+    bevelSize: 3,
+    bevelEnabled: true} );
+                 var textMesh = new THREE.Mesh( text, material_text );
+                 scene.add(textMesh);
+                // objects.push(mesh1);
                  groupe.add(mesh1);
                  scene.add(mesh1);
             }
@@ -106,7 +117,7 @@
                  mesh2.name = 2;
                   mesh2.position.z = 0;
                  mesh2.rotation.set(0,0,-Math.PI/2);
-                 objects.push(mesh2);
+                // objects.push(mesh2);
                  groupe.add(mesh2);
                  scene.add(mesh2);
             }
@@ -316,7 +327,7 @@
                  mesh17.name = 17;
                 mesh17.position.z = 0;
                 mesh17.rotation.set(0,0,-Math.PI/2);
-                 objects.push(mesh17);
+               //  objects.push(mesh17);
                  groupe.add(mesh17);
                  scene.add(mesh17);
             }
@@ -330,7 +341,7 @@
                  mesh18.name = 18;
                   mesh18.position.z = 0;
                  mesh18.rotation.set(0,0,-Math.PI/2);
-                 objects.push(mesh18);
+                 //objects.push(mesh18);
                  groupe.add(mesh18);
                  scene.add(mesh18);
             }

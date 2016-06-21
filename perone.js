@@ -87,7 +87,7 @@ function onMouseMove( event ) {
 	if ( intersections.length > 0 ) {
 				if ( intersected != intersections[ 0 ].object ) {
                     if (selectionner) {
-                        for(i=0 ;i<18;i++){               
+                        for(i=0 ;i<objects.length;i++){               
                             objects[i].material.color.setHex(baseColor);
                         }
                     }
@@ -113,7 +113,7 @@ function onMouseMove( event ) {
          var min = min_of_array-1;
          var max = max_of_array-1; 
         // console.log("min",min,"max",max) ; 
-        for (var i = 0; i < 18 ; i++) {        
+        for (var i = 0; i < objects.length ; i++) {        
                if(objects[i].name>=min_of_array && objects[i].name<=max_of_array){
                     objects[i].material.color.setHex( 0xff6954 );
                }
