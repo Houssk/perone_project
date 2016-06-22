@@ -6,7 +6,7 @@
 /**
  * Initialisation des variables
  */
-var renderer , scene , camera  , geometry , controls, mesh ,raycaster,mousevar ,intersected;
+var renderer_perone , scene_perone , camera_perone  , geometry_perone , controls_perone, mesh ,raycaster,mousevar ,intersected;
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 var groupe = new THREE.Object3D();
@@ -37,32 +37,32 @@ function init() {
     /**
      * Initialisation du render 
      */
-    renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setPixelRatio(window.devicePixelRatio);  
-    renderer.setSize(width_div, height_div);
-    renderer.setClearColor(0x424243);
-    document.getElementById("perone").appendChild(renderer.domElement);
+    renderer_perone = new THREE.WebGLRenderer({antialias: true});
+    renderer_perone.setPixelRatio(window.devicePixelRatio);  
+    renderer_perone.setSize(width_div, height_div);
+    renderer_perone.setClearColor(0x424243);
+    document.getElementById("perone").appendChild(renderer_perone.domElement);
    /**
-    * Initialisation de la scene
+    * Initialisation de la scene_perone
     */
-    scene = new THREE.Scene();
+    scene_perone = new THREE.Scene();
     var ambient = new THREE.AmbientLight(0x404040,1);
-    scene.add(ambient);    
+    scene_perone.add(ambient);    
     var hemiLight =  new THREE.HemisphereLight( 0xffffff, 0xffffff, 1 );
     hemiLight.color.set(0xd3d3d3);
 	hemiLight.groundColor.setHSL( 0, 0, 0 );
-	scene.add( hemiLight );
+	scene_perone.add( hemiLight );
     var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
     directionalLight.position.set( -50, -50, -20 );
-    scene.add( directionalLight );
+    scene_perone.add( directionalLight );
    /**
-    * Initialisation du camera
+    * Initialisation du camera_perone
     */
-    camera = new THREE.PerspectiveCamera( 50, width_div / height_div, 1, 20000 );
-        camera.position.z = 480;
-        camera.position.y = 0;
-        camera.position.x = 0;
-        scene.add(camera);   
+    camera_perone = new THREE.PerspectiveCamera( 50, width_div / height_div, 1, 20000 );
+        camera_perone.position.z = 480;
+        camera_perone.position.y = 0;
+        camera_perone.position.x = 0;
+        scene_perone.add(camera_perone);   
         affichageperone();  
 
      window.addEventListener('resize', onWindowResize, false);  
@@ -80,9 +80,9 @@ function onMouseMove( event ) {
 
 /*  console.log("mouse.x , mouse.y ",mouse.x,mouse.y);
     console.log("event.clientX , event.clientY",event.clientX,event.clientY);
-    console.log("renderer.domElement.width,renderer.domElement.height ",renderer.domElement.width,renderer.domElement.height );*/
+    console.log("renderer_perone.domElement.width,renderer_perone.domElement.height ",renderer_perone.domElement.width,renderer_perone.domElement.height );*/
 
-    raycaster.setFromCamera( mouse, camera );
+    raycaster.setFromCamera( mouse, camera_perone );
     var intersections = raycaster.intersectObjects( objects );
 	if ( intersections.length > 0 ) {
 				if ( intersected != intersections[ 0 ].object ) {
@@ -132,17 +132,17 @@ function onMouseMove( event ) {
 function onWindowResize() {
 		    windowHalfX = width_div / 2;
 		    windowHalfY = height_div/ 2;
-		    camera.aspect = width_div / height_div;
-		    camera.updateProjectionMatrix();
-		    renderer.setSize(width_div, height_div);
+		    camera_perone.aspect = width_div / height_div;
+		    camera_perone.updateProjectionMatrix();
+		    renderer_perone.setSize(width_div, height_div);
 		}
 /**
- * @description : permet de boucler infinement la scene 
+ * @description : permet de boucler infinement la scene_perone 
  */
 function render(){
-    controls.update();
+    controls_perone.update();
 	requestAnimationFrame(render);
-	renderer.render(scene,camera);	
+	renderer_perone.render(scene_perone,camera_perone);	
 }
 init();
 render();

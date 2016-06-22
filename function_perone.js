@@ -18,7 +18,7 @@
                         };
             var onError = function ( xhr ) {
                         };
-            controls =  new THREE.OrbitControls( camera , renderer.domElement);
+            controls =  new THREE.OrbitControls( camera_perone_perone_perone , renderer_perone.domElement);
             var loader = new THREE.OBJLoader(manager);
             var compteur = 1;
             for(var i=1 ; i<=26 ; i++){
@@ -27,12 +27,12 @@
                 object.traverse( function (child) {
                     if( child instanceof THREE.Mesh){
                          
-                        geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                        mesh = new THREE.Mesh(geometry, child.material );                    
+                        geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                        mesh = new THREE.Mesh(geometry_perone, child.material );                    
                         console.log("compteur , max , min" ,compteur , max , min);                    
                         mesh.rotation.set(0,0,-Math.PI/2);
                         objects.push(mesh);
-                        scene.add(mesh);
+                        scene_perone.add(mesh);
                       }
                    
                     })
@@ -81,14 +81,14 @@
     var onError = function ( xhr ) {
                 };
 
-    controls =  new THREE.OrbitControls( camera , renderer.domElement);
+    controls_perone =  new THREE.OrbitControls( camera_perone , renderer_perone.domElement);
     var loader = new THREE.OBJLoader(manager);
 
     loader.load("img/perone_1.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh1 = new THREE.Mesh(geometry, child.material );
+                 geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh1 = new THREE.Mesh(geometry_perone, child.material );
                  mesh1.name = 1;
                  mesh1.position.z = 0;
                  mesh1.rotation.set(0,0,-Math.PI/2);
@@ -118,249 +118,249 @@
                             var mesh = new THREE.Mesh( textGeo, textMaterial ); 
                             mesh.position.set(150,0,4);  
                             mesh.rotation.set(0,-0.3,0);                
-                            scene.add( mesh );
+                            scene_perone.add( mesh );
 
                         } );*/
                  groupe.add(mesh1);
-                 scene.add(mesh1);
+                 scene_perone.add(mesh1);
             }
          })
         })
         loader.load("img/perone_2.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh2 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh2 = new THREE.Mesh(geometry_perone, child.material );
                  mesh2.name = 2;
                   mesh2.position.z = 0;
                  mesh2.rotation.set(0,0,-Math.PI/2);
                 // objects.push(mesh2);
                  groupe.add(mesh2);
-                 scene.add(mesh2);
+                 scene_perone.add(mesh2);
             }
          })
         })
         loader.load("img/perone_3.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh3 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh3 = new THREE.Mesh(geometry_perone, child.material );
                  mesh3.name = 3;
                  mesh3.position.z = 0;
                  mesh3.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh3);
                  groupe.add(mesh3);
-                 scene.add(mesh3);
+                 scene_perone.add(mesh3);
             }
          })
         })
         loader.load("img/perone_4.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh4 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh4 = new THREE.Mesh(geometry_perone, child.material );
                  mesh4.name = 4;
                   mesh4.position.z = 0;
                 mesh4.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh4);
                  groupe.add(mesh4);
-                 scene.add(mesh4);
+                 scene_perone.add(mesh4);
             }
          })
         })
         loader.load("img/perone_5.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh5 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh5 = new THREE.Mesh(geometry_perone, child.material );
                  mesh5.name = 5;
                   mesh5.position.z = 0;
                mesh5.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh5);
                  groupe.add(mesh5);
-                 scene.add(mesh5);
+                 scene_perone.add(mesh5);
             }
          })
         })
         loader.load("img/perone_6.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh6 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh6 = new THREE.Mesh(geometry_perone, child.material );
                  mesh6.name = 6;
                   mesh6.position.z = 0;
                  mesh6.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh6);
                  groupe.add(mesh6);
-                 scene.add(mesh6);
+                 scene_perone.add(mesh6);
             }
          })
         })
         loader.load("img/perone_7.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh7 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh7 = new THREE.Mesh(geometry_perone, child.material );
                  mesh7.name = 7;
                   mesh7.position.z = 0;
                  mesh7.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh7);
                  groupe.add(mesh7);
-                 scene.add(mesh7);
+                 scene_perone.add(mesh7);
             }
          })
         })
         loader.load("img/perone_8.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh8 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh8 = new THREE.Mesh(geometry_perone, child.material );
                  mesh8.name = 8;
                   mesh8.position.z = 0;
                 mesh8.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh8);
                  groupe.add(mesh8);
-                 scene.add(mesh8);
+                 scene_perone.add(mesh8);
             }
          })
         })
         loader.load("img/perone_9.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh9 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh9 = new THREE.Mesh(geometry_perone, child.material );
                  mesh9.name = 9;
                   mesh9.position.z = 0;
                  mesh9.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh9);
                  groupe.add(mesh9);
-                 scene.add(mesh9);
+                 scene_perone.add(mesh9);
             }
          })
         })
         loader.load("img/perone_10.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh10 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh10 = new THREE.Mesh(geometry_perone, child.material );
                  mesh10.name = 10;
                   mesh10.position.z = 0;
                  mesh10.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh10);
                  groupe.add(mesh10);
-                 scene.add(mesh10);
+                 scene_perone.add(mesh10);
             }
          })
         })
         loader.load("img/perone_11.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh11 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh11 = new THREE.Mesh(geometry_perone, child.material );
                  mesh11.name =11;
                   mesh11.position.z = 0;
                  mesh11.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh11);
                  groupe.add(mesh11);
-                 scene.add(mesh11);
+                 scene_perone.add(mesh11);
             }
          })
         })
         loader.load("img/perone_12.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh12 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh12 = new THREE.Mesh(geometry_perone, child.material );
                  mesh12.name = 12;
                  mesh12.position.z = 0;
                  mesh12.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh12);
                  groupe.add(mesh12);
-                 scene.add(mesh12);
+                 scene_perone.add(mesh12);
             }
          })
         })
         loader.load("img/perone_13.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh13 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh13 = new THREE.Mesh(geometry_perone, child.material );
                  mesh13.name = 13;
                   mesh13.position.z = 0;
                  mesh13.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh13);
                  groupe.add(mesh13);
-                 scene.add(mesh13);
+                 scene_perone.add(mesh13);
             }
          })
         })
         loader.load("img/perone_14.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh14 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh14 = new THREE.Mesh(geometry_perone, child.material );
                  mesh14.name = 14;
                   mesh14.position.z = 0;
                  mesh14.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh14);
                  groupe.add(mesh14);
-                 scene.add(mesh14);
+                 scene_perone.add(mesh14);
             }
          })
         })
         loader.load("img/perone_15.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh15 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh15 = new THREE.Mesh(geometry_perone, child.material );
                  mesh15.name = 15;
                   mesh15.position.z = 0;
                  mesh15.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh15);
                  groupe.add(mesh15);
-                 scene.add(mesh15);
+                 scene_perone.add(mesh15);
             }
          })
         })
         loader.load("img/perone_16.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh16 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh16 = new THREE.Mesh(geometry_perone, child.material );
                  mesh16.name = 16;
                   mesh16.position.z = 0;
                  mesh16.rotation.set(0,0,-Math.PI/2);
                  objects.push(mesh16);
                  groupe.add(mesh16);
-                 scene.add(mesh16);
+                 scene_perone.add(mesh16);
             }
          })
         })
         loader.load("img/perone_17.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh17 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh17 = new THREE.Mesh(geometry_perone, child.material );
                  mesh17.name = 17;
                 mesh17.position.z = 0;
                 mesh17.rotation.set(0,0,-Math.PI/2);
                //  objects.push(mesh17);
                  groupe.add(mesh17);
-                 scene.add(mesh17);
+                 scene_perone.add(mesh17);
             }
          })
         })
          loader.load("img/perone_18.obj", function(object){
         object.traverse( function (child) {
             if( child instanceof THREE.Mesh){
-                geometry = new THREE.Geometry().fromBufferGeometry(child.geometry);
-                 var mesh18 = new THREE.Mesh(geometry, child.material );
+                geometry_perone = new THREE.Geometry().fromBufferGeometry(child.geometry);
+                 var mesh18 = new THREE.Mesh(geometry_perone, child.material );
                  mesh18.name = 18;
                   mesh18.position.z = 0;
                  mesh18.rotation.set(0,0,-Math.PI/2);
                  //objects.push(mesh18);
                  groupe.add(mesh18);
-                 scene.add(mesh18);
+                 scene_perone.add(mesh18);
             }
          })
         })
