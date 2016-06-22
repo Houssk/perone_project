@@ -92,18 +92,35 @@
                  mesh1.name = 1;
                  mesh1.position.z = 0;
                  mesh1.rotation.set(0,0,-Math.PI/2);
-                 var material_text = new THREE.MeshPhongMaterial({ color: 0xdddddd    });
-                 var text = new THREE.TextGeometry( "4mm" , { size: 60,
-    height: 20,
-    curveSegments: 3,
-    font: 'helvetiker',
-    weight: 'normal',
-    bevelThickness: 3,
-    bevelSize: 3,
-    bevelEnabled: true} );
-                 var textMesh = new THREE.Mesh( text, material_text );
-                 scene.add(textMesh);
                 // objects.push(mesh1);
+               /* var loader = new THREE.FontLoader();
+
+                        loader.load( 'examples/fonts/helvetiker_bold.typeface.js', function ( font ) {
+
+                            var textGeo = new THREE.TextGeometry( "4cm", {
+
+                                font: font,
+
+                                size: 10,
+                                height: 20,
+                                curveSegments: 5,
+
+                                bevelThickness: 2,
+                                bevelSize: 0.5,
+                                bevelEnabled: true
+
+                            } );
+
+                            var textMaterial = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
+                            
+                            
+
+                            var mesh = new THREE.Mesh( textGeo, textMaterial ); 
+                            mesh.position.set(150,0,4);  
+                            mesh.rotation.set(0,-0.3,0);                
+                            scene.add( mesh );
+
+                        } );*/
                  groupe.add(mesh1);
                  scene.add(mesh1);
             }
